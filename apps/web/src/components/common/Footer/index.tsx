@@ -9,7 +9,6 @@ import packageJson from '../../../../package.json'
 import ExternalLink from '../ExternalLink'
 import MUILink from '@mui/material/Link'
 import { HELP_CENTER_URL } from '@/config/constants'
-import { useIsOfficialHost } from '@/hooks/useIsOfficialHost'
 import darkPalette from '@/components/theme/darkPalette'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
 
@@ -35,7 +34,6 @@ const FooterLink = ({ children, href }: { children: ReactNode; href: string }): 
 
 const Footer = (): ReactElement | null => {
   const router = useRouter()
-  const isOfficialHost = useIsOfficialHost()
 
   if (!footerPages.some((path) => router.pathname.startsWith(path))) {
     return null
