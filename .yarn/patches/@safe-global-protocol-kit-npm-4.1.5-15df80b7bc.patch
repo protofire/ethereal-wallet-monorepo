@@ -1,0 +1,12 @@
+diff --git a/dist/src/utils/eip-3770/config.js b/dist/src/utils/eip-3770/config.js
+index 4937a8edcfb3981d3974d2a0fa9bafdb92cde131..5a32b528331307bf28fee3a244016aadd44f8645 100644
+--- a/dist/src/utils/eip-3770/config.js
++++ b/dist/src/utils/eip-3770/config.js
+@@ -320,6 +320,7 @@ exports.networks = [
+     { chainId: 555666n, shortName: 'eclipset' },
+     { chainId: 622277n, shortName: 'rth' },
+     { chainId: 656476n, shortName: 'open-campus-codex' },
++    { chainId: 657468n, shortName: 'ethereal-testnet' },
+     { chainId: 660279n, shortName: 'xai' },
+     { chainId: 668668n, shortName: 'cnw' },
+     { chainId: 713715n, shortName: 'sei-devnet' },
