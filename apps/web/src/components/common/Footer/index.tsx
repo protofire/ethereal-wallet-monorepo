@@ -10,6 +10,7 @@ import ExternalLink from '../ExternalLink'
 import MUILink from '@mui/material/Link'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
 import { PROTOFIRE_SUPPORT_LINK } from '@/config/constants.extra'
+import darkPalette from '@/components/theme/darkPalette'
 
 const footerPages = [AppRoutes.welcome.index, AppRoutes.settings.index, AppRoutes.cookie, AppRoutes.terms]
 
@@ -39,7 +40,7 @@ const Footer = (): ReactElement | null => {
       <ul>
         <>
           <li>
-            <Typography variant="caption">© {new Date().getFullYear()} Pharos Safe</Typography>
+            <Typography variant="caption">© {new Date().getFullYear()} Ethereal Safe</Typography>
           </li>
           <li>
             <FooterLink href={getHref(AppRoutes.terms)}>Terms</FooterLink>
@@ -70,7 +71,7 @@ const Footer = (): ReactElement | null => {
               fontSize="small"
               sx={{ verticalAlign: 'middle', mx: 0.5 }}
             />
-            <ExternalLink href="https://protofire.io" sx={{ textDecoration: 'none' }}>
+            <ExternalLink href="https://protofire.io" sx={{ color: darkPalette.primary.main, textDecoration: 'none' }}>
               Protofire
             </ExternalLink>
           </Typography>

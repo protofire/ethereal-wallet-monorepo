@@ -74,16 +74,7 @@ const ChainIndicator = ({
       })}
     >
       {showLogo && (
-        // <img
-        //   src={chainConfig.chainLogoUri ?? undefined}
-        //   alt={`${chainConfig.chainName} Logo`}
-        //   width={24}
-        //   height={24}
-        //   loading="lazy"
-        //   style={{ borderRadius: '50%' }}
-        // />
         <LogoRound
-          // src={chainConfig.chainLogoUri ?? undefined}
           alt={`${chainConfig.chainName} Logo`}
           width={24}
           height={24}
