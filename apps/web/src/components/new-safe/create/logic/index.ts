@@ -58,7 +58,15 @@ export const createNewSafe = async (
   callback: (txHash: string) => void,
   isL1SafeSingleton?: boolean,
 ): Promise<void> => {
+  console.log({
+    provider,
+    safeVersion,
+    isL1SafeSingleton,
+  })
+
   const safeFactory = await getSafeFactory(provider, safeVersion, isL1SafeSingleton)
+
+  console.log({ safeFactory })
 
   if (isPredictedSafeProps(undeployedSafeProps)) {
     await safeFactory.deploySafe({ ...undeployedSafeProps, options, callback })
