@@ -8,19 +8,11 @@ import { AppRoutes } from '@/config/routes'
 import packageJson from '../../../../package.json'
 import ExternalLink from '../ExternalLink'
 import MUILink from '@mui/material/Link'
-import { HELP_CENTER_URL } from '@/config/constants'
-import darkPalette from '@/components/theme/darkPalette'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
+import { PROTOFIRE_SUPPORT_LINK } from '@/config/constants.extra'
+import darkPalette from '@/components/theme/darkPalette'
 
-const footerPages = [
-  AppRoutes.welcome.index,
-  AppRoutes.settings.index,
-  AppRoutes.imprint,
-  AppRoutes.privacy,
-  AppRoutes.cookie,
-  AppRoutes.terms,
-  AppRoutes.licenses,
-]
+const footerPages = [AppRoutes.welcome.index, AppRoutes.settings.index, AppRoutes.cookie, AppRoutes.terms]
 
 const FooterLink = ({ children, href }: { children: ReactNode; href: string }): ReactElement => {
   return href ? (
@@ -46,17 +38,25 @@ const Footer = (): ReactElement | null => {
   return (
     <footer className={css.container}>
       <ul>
-        <li>
-          <FooterLink href={getHref(AppRoutes.terms)}>Terms</FooterLink>
-        </li>
-        <li>
-          <FooterLink href={getHref(AppRoutes.cookie)}>Cookie policy</FooterLink>
-        </li>
-        <li>
-          <ExternalLink href={HELP_CENTER_URL} noIcon sx={{ span: { textDecoration: 'underline' } }}>
-            Help
-          </ExternalLink>
-        </li>
+        <>
+          <li>
+            <Typography variant="caption">© {new Date().getFullYear()} Ethereal Safe</Typography>
+          </li>
+          <li>
+            <FooterLink href={getHref(AppRoutes.terms)}>Terms</FooterLink>
+          </li>
+          <li>
+            <FooterLink href={getHref(AppRoutes.cookie)}>Cookie policy</FooterLink>
+          </li>
+          <li>
+            <FooterLink href={getHref(AppRoutes.settings.index)}>Preferences</FooterLink>
+          </li>
+          <li>
+            <ExternalLink href={PROTOFIRE_SUPPORT_LINK} noIcon sx={{ span: { textDecoration: 'underline' } }}>
+              Help
+            </ExternalLink>
+          </li>
+        </>
         <li>
           <ExternalLink href={`${packageJson.homepage}/releases/tag/v${packageJson.version}`} noIcon>
             <SvgIcon component={GitHubIcon} inheritViewBox fontSize="inherit" sx={{ mr: 0.5 }} /> v{packageJson.version}
