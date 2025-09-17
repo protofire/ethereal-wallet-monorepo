@@ -4,13 +4,13 @@ import { useAppSelector } from '@/store'
 import { CookieAndTermType, hasConsentFor } from '@/store/cookiesAndTermsSlice'
 import { ListItem, SvgIcon, Link } from '@mui/material'
 import DebugToggle from '../DebugToggle'
-import { HELP_CENTER_URL, IS_PRODUCTION } from '@/config/constants'
+import { IS_PRODUCTION } from '@/config/constants'
 import { useCurrentChain } from '@/hooks/useChains'
 import { Typography } from '@/components/common/Mui'
 import ProtofireLogo from '@/public/images/protofire-logo.svg'
 import Track from '@/components/common/Track'
 import { SidebarList, SidebarListItemButton, SidebarListItemIcon, SidebarListItemText } from '../SidebarList'
-import { NEW_SUGGESTION_FORM } from '@/config/constants.extra'
+import { NEW_SUGGESTION_FORM, PROTOFIRE_SUPPORT_LINK } from '@/config/constants.extra'
 import { OVERVIEW_EVENTS } from '@/services/analytics'
 
 import HelpCenterIcon from '@/public/images/sidebar/help-center.svg'
@@ -38,7 +38,7 @@ const SidebarFooter = (): ReactElement => {
 
       <Track {...OVERVIEW_EVENTS.HELP_CENTER}>
         <ListItem disablePadding>
-          <a target="_blank" rel="noopener noreferrer" href={HELP_CENTER_URL} style={{ width: '100%' }}>
+          <a target="_blank" rel="noopener noreferrer" href={PROTOFIRE_SUPPORT_LINK} style={{ width: '100%' }}>
             <SidebarListItemButton>
               <SidebarListItemIcon color="primary">
                 <HelpCenterIcon />
