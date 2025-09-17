@@ -107,7 +107,7 @@ const PrivateKeyModule = (chainId: ChainInfo['chainId'], rpcUri: ChainInfo['rpcU
               eth_signTypedData: async ({ params }) => {
                 const [, _t] = params
 
-                const typedData = JSON.parse(_t);
+                const typedData = JSON.parse(_t)
 
                 return await wallet.signTypedData(
                   typedData.domain,
@@ -120,7 +120,7 @@ const PrivateKeyModule = (chainId: ChainInfo['chainId'], rpcUri: ChainInfo['rpcU
               eth_signTypedData_v4: async ({ params }) => {
                 const [, _t] = params
 
-                const typedData = JSON.parse(_t);
+                const typedData = JSON.parse(_t)
 
                 return await wallet.signTypedData(
                   typedData.domain,
