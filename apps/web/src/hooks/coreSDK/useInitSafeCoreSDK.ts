@@ -13,6 +13,8 @@ import { asError } from '@/services/exceptions/utils'
 
 export const useInitSafeCoreSDK = () => {
   const { safe, safeLoaded } = useSafeInfo()
+
+  console.log({ safe })
   const dispatch = useAppDispatch()
   const web3ReadOnly = useWeb3ReadOnly()
 
@@ -40,6 +42,7 @@ export const useInitSafeCoreSDK = () => {
     })
       .then(setSafeSDK)
       .catch((_e) => {
+        console.log(_e)
         const e = asError(_e)
         dispatch(
           showNotification({

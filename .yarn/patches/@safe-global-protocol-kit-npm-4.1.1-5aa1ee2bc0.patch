@@ -1,0 +1,12 @@
+diff --git a/dist/src/utils/eip-3770/config.js b/dist/src/utils/eip-3770/config.js
+index 00ae69d98a0dceb02337342739a8459d62cab78b..68e3a060bd469dcb074ccc1cc5deaccb5b6800c6 100644
+--- a/dist/src/utils/eip-3770/config.js
++++ b/dist/src/utils/eip-3770/config.js
+@@ -280,6 +280,7 @@ exports.networks = [
+     { chainId: 11155111n, shortName: 'sep' },
+     { chainId: 11155420n, shortName: 'opsep' },
+     { chainId: 12227332n, shortName: 'neox-t4' },
++    { chainId: 13374202n, shortName: 'ethereal-testnet-0' },
+     { chainId: 52164803n, shortName: 'fluence-testnet' },
+     { chainId: 94204209n, shortName: 'polygon-blackberry' },
+     { chainId: 111557560n, shortName: 'cysep' },

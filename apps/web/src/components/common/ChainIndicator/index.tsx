@@ -8,6 +8,7 @@ import useChainId from '@/hooks/useChainId'
 import { Skeleton, Stack, Typography } from '@mui/material'
 import isEmpty from 'lodash/isEmpty'
 import FiatValue from '../FiatValue'
+import LogoRound from '@/public/images/logo-round.svg'
 
 type ChainIndicatorProps = {
   chainId?: string
@@ -69,15 +70,16 @@ const ChainIndicator = ({
         [css.withLogo]: showLogo,
         [css.responsive]: responsive,
         [css.onlyLogo]: onlyLogo,
+        [css.borderRadius]: '50%',
       })}
     >
       {showLogo && (
-        <img
-          src={chainConfig.chainLogoUri ?? undefined}
+        <LogoRound
           alt={`${chainConfig.chainName} Logo`}
           width={24}
           height={24}
           loading="lazy"
+          style={{ borderRadius: '50%' }}
         />
       )}
       {!onlyLogo && (

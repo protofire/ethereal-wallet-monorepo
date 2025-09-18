@@ -5,6 +5,10 @@ import MUILink from '@mui/material/Link'
 import { AppRoutes } from '@/config/routes'
 import { useIsOfficialHost } from '@/hooks/useIsOfficialHost'
 import { BRAND_NAME } from '@/config/constants'
+import ReactMarkdown from 'react-markdown'
+import { Typography } from '@mui/material'
+import { useEffect, useState } from 'react'
+import { COOKIE_LINK } from '@/config/constants.extra'
 
 const SafeCookiePolicy = () => (
   <div>
@@ -27,7 +31,7 @@ const SafeCookiePolicy = () => (
     `}</style>
 
     <h1>Cookie Policy</h1>
-    <p>Last updated: January 2024.</p>
+    <p>Last updated: October 2024.</p>
     <p>
       As described in our{' '}
       <Link href={AppRoutes.privacy} passHref legacyBehavior>
@@ -48,8 +52,8 @@ const SafeCookiePolicy = () => (
     </p>
     <p>
       In this policy, &quot;we&quot;, &quot;us&quot; and &quot;our&quot; refers to Core Contributors GmbH a company
-      incorporated in Germany with its registered address at Gontardstraße 11, 10178 Berlin, Germany. The terms
-      &ldquo;you&rdquo; and &ldquo;your&rdquo; includes our clients, business partners and users of this website.{' '}
+      incorporated in Germany with its registered address at c/o WeWork, Dircksenstr. 3, 10179 Berlin, Germany. The
+      terms &ldquo;you&rdquo; and &ldquo;your&rdquo; includes our clients, business partners and users of this website.{' '}
     </p>
     <p>
       By using our website, you consent to storage and access to cookies and other technologies on your device, in
@@ -592,14 +596,34 @@ const SafeCookiePolicy = () => (
 
 const CookiePolicy: NextPage = () => {
   const isOfficialHost = useIsOfficialHost()
+  const [content, setContent] = useState<string>('')
+  useEffect(() => {
+    const fetchContent = async () => {
+      try {
+        const response = await fetch(COOKIE_LINK)
+        let text = await response.text()
+        text = text.replace(/\${origin}/g, window.location.origin)
+        setContent(text)
+      } catch (error) {
+        console.error('Error fetching cookie policy:', error)
+      }
+    }
 
+    fetchContent()
+  }, [])
   return (
     <>
       <Head>
         <title>{`${BRAND_NAME} – Cookie policy`}</title>
       </Head>
 
-      <main>{isOfficialHost && <SafeCookiePolicy />}</main>
+      <main>
+        {isOfficialHost ? (
+          <SafeCookiePolicy />
+        ) : (
+          <>{content ? <ReactMarkdown>{content}</ReactMarkdown> : <Typography>Loading cookie policy...</Typography>}</>
+        )}
+      </main>
     </>
   )
 }
