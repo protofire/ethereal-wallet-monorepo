@@ -58,14 +58,11 @@ export const initSafeSDK = async ({
   const providerNetwork = (await provider.getNetwork()).chainId
   if (providerNetwork !== BigInt(chainId)) return
 
-  console.log({ providerNetwork })
-
   const safeVersion = version ?? (await Gnosis_safe__factory.connect(address, provider).VERSION())
   let isL1SafeSingleton = chainId === chains.eth
 
   // If it is an official deployment we should still initiate the safeSDK
   if (!isValidMasterCopy(implementationVersionState)) {
-    console.log('isValidMasterCopy')
     const masterCopy = implementation
 
     const safeL1Deployment = getSafeSingletonDeployments({ network: chainId, version: safeVersion })
@@ -79,19 +76,13 @@ export const initSafeSDK = async ({
       return Promise.resolve(undefined)
     }
   }
-
-  console.log('here 1')
   // Legacy Safe contracts
   if (isLegacyVersion(safeVersion)) {
     isL1SafeSingleton = true
   }
 
-  console.log('here 2')
-
   if (undeployedSafe) {
-    console.log('here 3')
     if (isPredictedSafeProps(undeployedSafe.props) || isReplayedSafeProps(undeployedSafe.props)) {
-      console.log('here 4')
       return Safe.init({
         provider: provider._getConnection().url,
         isL1SafeSingleton,
@@ -102,7 +93,6 @@ export const initSafeSDK = async ({
     return
   }
 
-  console.log('here 5')
   return Safe.init({
     provider: provider._getConnection().url,
     safeAddress: address,
