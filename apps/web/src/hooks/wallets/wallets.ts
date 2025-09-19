@@ -3,7 +3,6 @@ import type { ChainInfo } from '@safe-global/safe-gateway-typescript-sdk'
 import type { InitOptions } from '@web3-onboard/core'
 import injectedWalletModule from '@web3-onboard/injected-wallets'
 import walletConnect from '@web3-onboard/walletconnect'
-import pkModule from '@/services/private-key-module'
 
 import { CGW_NAMES, WALLET_KEYS } from './consts'
 
