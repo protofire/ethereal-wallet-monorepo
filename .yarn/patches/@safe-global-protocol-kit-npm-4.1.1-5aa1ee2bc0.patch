@@ -1,12 +1,13 @@
 diff --git a/dist/src/utils/eip-3770/config.js b/dist/src/utils/eip-3770/config.js
-index 00ae69d98a0dceb02337342739a8459d62cab78b..68e3a060bd469dcb074ccc1cc5deaccb5b6800c6 100644
+index 00ae69d98a0dceb02337342739a8459d62cab78b..ce7ca2ecb894abfd756105ae6598e3de384f5af3 100644
 --- a/dist/src/utils/eip-3770/config.js
 +++ b/dist/src/utils/eip-3770/config.js
-@@ -280,6 +280,7 @@ exports.networks = [
-     { chainId: 11155111n, shortName: 'sep' },
-     { chainId: 11155420n, shortName: 'opsep' },
-     { chainId: 12227332n, shortName: 'neox-t4' },
+@@ -3,6 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
+ exports.networks = void 0;
+ // https://github.com/ethereum-lists/chains/tree/master/_data/chains
+ exports.networks = [
 +    { chainId: 13374202n, shortName: 'ethereal-testnet-0' },
-     { chainId: 52164803n, shortName: 'fluence-testnet' },
-     { chainId: 94204209n, shortName: 'polygon-blackberry' },
-     { chainId: 111557560n, shortName: 'cysep' },
++    { chainId: 5064014n, shortName: 'ethereal' },
+     { chainId: 1n, shortName: 'eth' },
+     { chainId: 3n, shortName: 'rop' },
+     { chainId: 4n, shortName: 'rin' },
