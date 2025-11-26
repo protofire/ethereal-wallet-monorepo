@@ -1,7 +1,7 @@
 import { Box, Tooltip, Button, SvgIcon } from '@mui/material'
 import { formatDistanceToNow } from 'date-fns'
 import { getIndexingStatus } from '@safe-global/safe-gateway-typescript-sdk'
-import useAsync from '@/hooks/useAsync'
+import useAsync from '@safe-global/utils/hooks/useAsync'
 import useChainId from '@/hooks/useChainId'
 import useIntervalCounter from '@/hooks/useIntervalCounter'
 import { OpenInNewRounded } from '@mui/icons-material'
@@ -83,7 +83,6 @@ const IndexingStatus = () => {
           '& .MuiButton-startIcon': { marginLeft: 0 },
           '& .MuiButton-endIcon': { justifySelf: 'flex-end', marginLeft: 'auto' },
         }}
-        style={{ display: 'flex' }}
       >
         {status.text}
       </Button>

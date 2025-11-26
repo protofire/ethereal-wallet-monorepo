@@ -1,0 +1,108 @@
+diff --git a/dist/assets/v1.3.0/compatibility_fallback_handler.json b/dist/assets/v1.3.0/compatibility_fallback_handler.json
+index be80b969495c0125b213cb618dfa676480667968..f804b8f4f42bf54d78e7cf101962ec31d0d91e93 100644
+--- a/dist/assets/v1.3.0/compatibility_fallback_handler.json
++++ b/dist/assets/v1.3.0/compatibility_fallback_handler.json
+@@ -17,6 +17,7 @@
+         }
+     },
+     "networkAddresses": {
++        "5064014": ["canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
+diff --git a/dist/assets/v1.3.0/create_call.json b/dist/assets/v1.3.0/create_call.json
+index 25e6be8253bdbb9dced54b2b2595b3a48c9a74d5..9e83892ce76c19135210bb0847965c5a649d482a 100644
+--- a/dist/assets/v1.3.0/create_call.json
++++ b/dist/assets/v1.3.0/create_call.json
+@@ -17,6 +17,7 @@
+         }
+     },
+     "networkAddresses": {
++        "5064014": ["canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
+diff --git a/dist/assets/v1.3.0/gnosis_safe.json b/dist/assets/v1.3.0/gnosis_safe.json
+index e8fa10d71c19b8e4b132f62ac59fa876ca4a3206..edebe23e2d5f30e5173d29489dcaf833652de572 100644
+--- a/dist/assets/v1.3.0/gnosis_safe.json
++++ b/dist/assets/v1.3.0/gnosis_safe.json
+@@ -17,6 +17,7 @@
+         }
+     },
+     "networkAddresses": {
++        "5064014": ["canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
+diff --git a/dist/assets/v1.3.0/gnosis_safe_l2.json b/dist/assets/v1.3.0/gnosis_safe_l2.json
+index 71a34ab3381bca310b321aba45b96488013356e6..bb188f4f6a2fc9e52bcd0c375c787720dffcf1bf 100644
+--- a/dist/assets/v1.3.0/gnosis_safe_l2.json
++++ b/dist/assets/v1.3.0/gnosis_safe_l2.json
+@@ -17,6 +17,7 @@
+         }
+     },
+     "networkAddresses": {
++        "5064014": ["canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
+diff --git a/dist/assets/v1.3.0/multi_send.json b/dist/assets/v1.3.0/multi_send.json
+index 7ac3e6a31ffbbba18e77c2203a42d565220c90c9..ec638cfc539865e55aa243ab2ee9b052fbfe80f8 100644
+--- a/dist/assets/v1.3.0/multi_send.json
++++ b/dist/assets/v1.3.0/multi_send.json
+@@ -17,6 +17,7 @@
+         }
+     },
+     "networkAddresses": {
++        "5064014": ["canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
+diff --git a/dist/assets/v1.3.0/multi_send_call_only.json b/dist/assets/v1.3.0/multi_send_call_only.json
+index a0ac84c6facf808cffae493a0042aa00d8cc3394..22fd768410397333f34a847d025e86edafa5a116 100644
+--- a/dist/assets/v1.3.0/multi_send_call_only.json
++++ b/dist/assets/v1.3.0/multi_send_call_only.json
+@@ -17,6 +17,7 @@
+         }
+     },
+     "networkAddresses": {
++        "5064014": ["canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
+diff --git a/dist/assets/v1.3.0/proxy_factory.json b/dist/assets/v1.3.0/proxy_factory.json
+index 2b20079f48768b94c05324e9cfcac190cd69edfe..fdef8bf3012dc5be59252f786e265eea867248f3 100644
+--- a/dist/assets/v1.3.0/proxy_factory.json
++++ b/dist/assets/v1.3.0/proxy_factory.json
+@@ -17,6 +17,7 @@
+         }
+     },
+     "networkAddresses": {
++        "5064014": ["canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
+diff --git a/dist/assets/v1.3.0/sign_message_lib.json b/dist/assets/v1.3.0/sign_message_lib.json
+index 36a3036bc800fe85cc5e33770ecd5a1a414bcc02..cf085a9fbf1edd1849b3d4baa5225742dfdc2461 100644
+--- a/dist/assets/v1.3.0/sign_message_lib.json
++++ b/dist/assets/v1.3.0/sign_message_lib.json
+@@ -17,6 +17,7 @@
+         }
+     },
+     "networkAddresses": {
++        "5064014": ["canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
+diff --git a/dist/assets/v1.3.0/simulate_tx_accessor.json b/dist/assets/v1.3.0/simulate_tx_accessor.json
+index 825ad169f38e0909e16c3cac979e66bf06469619..321acbaa2e823f8a9cba44ca6debe925a08130a5 100644
+--- a/dist/assets/v1.3.0/simulate_tx_accessor.json
++++ b/dist/assets/v1.3.0/simulate_tx_accessor.json
+@@ -17,6 +17,7 @@
+         }
+     },
+     "networkAddresses": {
++        "5064014": ["canonical", "eip155"],
+         "1": ["canonical", "eip155"],
+         "3": "canonical",
+         "4": "canonical",
