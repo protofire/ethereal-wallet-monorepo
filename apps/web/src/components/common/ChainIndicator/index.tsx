@@ -5,11 +5,10 @@ import { useAppSelector } from '@/store'
 import { selectChainById, selectChains } from '@/store/chainsSlice'
 import css from './styles.module.css'
 import useChainId from '@/hooks/useChainId'
-import { Skeleton, Stack, SvgIcon, Typography } from '@mui/material'
+import { Skeleton, Stack, Typography } from '@mui/material'
 import isEmpty from 'lodash/isEmpty'
 import FiatValue from '../FiatValue'
 import LogoRound from '@/public/images/logo-round.svg'
-import UnknownChainIcon from '@/public/images/common/unknown.svg'
 
 type ChainIndicatorProps = {
   chainId?: string
@@ -42,7 +41,6 @@ const ChainIndicator = ({
   showLogo = true,
   responsive = false,
   onlyLogo = false,
-  imageSize = 24,
 }: ChainIndicatorProps): ReactElement | null => {
   const currentChainId = useChainId()
   const id = chainId || currentChainId
@@ -61,13 +59,15 @@ const ChainIndicator = ({
     }
   }, [chainConfig])
 
-  const logoComponent = <LogoRound
-    alt={`${chainConfig?.chainName} Logo`}
-    width={24}
-    height={24}
-    loading="lazy"
-    style={{ borderRadius: '50%' }}
-  />;
+  const logoComponent = (
+    <LogoRound
+      alt={`${chainConfig?.chainName} Logo`}
+      width={24}
+      height={24}
+      loading="lazy"
+      style={{ borderRadius: '50%' }}
+    />
+  )
 
   return noChains ? (
     <Skeleton width="100%" height="22px" variant="rectangular" sx={{ flexShrink: 0 }} />
@@ -85,19 +85,17 @@ const ChainIndicator = ({
       })}
     >
       {showLogo && logoComponent}
-      {
-        !onlyLogo && (
-          <Stack>
-            <span className={css.name}>{chainConfig.chainName}</span>
-            {fiatValue && (
-              <Typography fontWeight={700} textAlign="left" fontSize="14px">
-                <FiatValue value={fiatValue} />
-              </Typography>
-            )}
-          </Stack>
-        )
-      }
-    </span >
+      {!onlyLogo && (
+        <Stack>
+          <span className={css.name}>{chainConfig.chainName}</span>
+          {fiatValue && (
+            <Typography fontWeight={700} textAlign="left" fontSize="14px">
+              <FiatValue value={fiatValue} />
+            </Typography>
+          )}
+        </Stack>
+      )}
+    </span>
   ) : null
 }
 

@@ -89,7 +89,7 @@ const SidebarFooter = (): ReactElement => {
       </ListItem>
 
       <IndexingStatus />
-    </SidebarList >
+    </SidebarList>
   )
 }
 
