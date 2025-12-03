@@ -1,13 +1,13 @@
 diff --git a/dist/src/utils/eip-3770/config.js b/dist/src/utils/eip-3770/config.js
-index 0a7a36bb93eda7a8c5f67e823cf4c76b8f7e2d0d..602d10778c1bc45ca757de72c744762790e3e4c9 100644
+index 0a7a36bb93eda7a8c5f67e823cf4c76b8f7e2d0d..87f96dd8372b280466cc8dee7ac9e9f9a8016b7a 100644
 --- a/dist/src/utils/eip-3770/config.js
 +++ b/dist/src/utils/eip-3770/config.js
 @@ -3,6 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
  exports.networks = void 0;
  // https://github.com/ethereum-lists/chains/tree/master/_data/chains
  exports.networks = [
-+    { chainId: 13374202n, shortName: 'ethereal-testnet-0' },
 +    { chainId: 5064014n, shortName: 'ethereal' },
++    { chainId: 13374202n, shortName: 'ethereal-testnet-0' },
      { chainId: 1n, shortName: 'eth' },
      { chainId: 3n, shortName: 'rop' },
      { chainId: 4n, shortName: 'rin' },
