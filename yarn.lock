@@ -9601,17 +9601,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@safe-global/safe-modules-deployments@npm:^2.2.12":
+"@safe-global/safe-modules-deployments@npm:2.2.12":
   version: 2.2.12
   resolution: "@safe-global/safe-modules-deployments@npm:2.2.12"
   checksum: 10/a8f735631f8c0c10b5e2b7aa8ce5a92e74a3d2fd3d8647e55031569a1895c8e6a5c224a834d41f0ff399831e889cdc4003f057b8c934c3f514ddd2acf0cc24f7
   languageName: node
   linkType: hard
 
-"@safe-global/safe-modules-deployments@npm:^2.2.21":
-  version: 2.2.21
-  resolution: "@safe-global/safe-modules-deployments@npm:2.2.21"
-  checksum: 10/ede226e1fff06befa6adb267a2bec007caaaf6d44008585304a178c9bfb5d486079c2fd19e4277e6b0bc36d13d887b2e99940ca2546eaf62f9da77da6a406cf0
+"@safe-global/safe-modules-deployments@patch:@safe-global/safe-modules-deployments@npm%3A2.2.12#~/.yarn/patches/@safe-global-safe-modules-deployments-npm-2.2.12-c30bb15dee.patch":
+  version: 2.2.12
+  resolution: "@safe-global/safe-modules-deployments@patch:@safe-global/safe-modules-deployments@npm%3A2.2.12#~/.yarn/patches/@safe-global-safe-modules-deployments-npm-2.2.12-c30bb15dee.patch::version=2.2.12&hash=350074"
+  checksum: 10/9b056bc2a2192b71a5939e8c9b50016a700a1800c2d61131daba62ff8c7f40bd6be0e7cd7fc42dd6e2d0803897f4a67215eed44a4a2dbab50b9e70a7d12189ee
   languageName: node
   linkType: hard
 
@@ -9725,7 +9725,7 @@ __metadata:
     "@safe-global/safe-client-gateway-sdk": "npm:v1.60.1"
     "@safe-global/safe-deployments": "patch:@safe-global/safe-deployments@npm%3A1.37.49#~/.yarn/patches/@safe-global-safe-deployments-npm-1.37.49-abbdcadb50.patch"
     "@safe-global/safe-gateway-typescript-sdk": "npm:3.23.1"
-    "@safe-global/safe-modules-deployments": "npm:^2.2.12"
+    "@safe-global/safe-modules-deployments": "patch:@safe-global/safe-modules-deployments@npm%3A2.2.12#~/.yarn/patches/@safe-global-safe-modules-deployments-npm-2.2.12-c30bb15dee.patch"
     "@safe-global/store": "workspace:^"
     "@safe-global/test": "workspace:^"
     "@safe-global/types-kit": "npm:^1.0.5"
